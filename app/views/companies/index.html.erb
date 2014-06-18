@@ -1,0 +1,11 @@
+<h1> L I S T O F C O M P A N I E S </h1>
+
+<ul>
+	<% @companies.each do |c| %>
+		<li> <%= c.name %> <%= link_to "more info", company_path(c) %></li>
+	<% end %>
+</ul>
+
+<%= link_to "Add a Company", new_company_path %> <br>
+<%= link_to "List of Jobs", jobs_path %>
+

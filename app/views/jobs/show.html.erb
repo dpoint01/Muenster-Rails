@@ -1,0 +1,12 @@
+<h1> Position: <%= @jobs.title %> </h1>
+	
+<p> Company: <%=@jobs.company.name %> </p>
+<% if @jobs.description == nil %>
+	<p> Description: N/A </p>
+<% else %>
+	<p> Description: <%=@jobs.description%> </p>
+<% end %>
+
+<%= link_to "back to list", jobs_path%>
+
+<%= link_to "Company Info", company_path(@jobs.company.id) %>

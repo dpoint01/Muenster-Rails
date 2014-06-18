@@ -1,0 +1,15 @@
+<h1> Company Name: <%= @companies.name %> </h1>
+<p> <strong>Industry: </strong> <%= @companies.industry %> </p>	
+<p> <strong> Description of Company: </strong><%=@companies.description %> </p>
+
+
+<p> <strong> Positions Available: </strong> </p>
+	<ul>
+		<% @jobs.each do |j| %>
+			<li> <%= j.title %> ---> <%= link_to "more info", job_path(j)%> </li>
+		<% end %>
+	</ul>
+
+
+
+<%= link_to "List of Companies", companies_path %>

@@ -1,0 +1,12 @@
+<h1> L I S T   O F   J O B S </h1>
+
+<h2>Job Title || Company Name || Company Location </h2>
+
+<ul>
+	<% @jobs.each do |job| %>
+		<li> <%=job.title %> || <%=job.company.name%> || <%=job.company.location%> </li>
+		<%= link_to "more info", job_path(job) %>
+	<% end %>
+</ul>
+
+<%= link_to "List of Companies", companies_path %>
